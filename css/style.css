@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --ci01 : rgba(255, 69, 136, 1);
+    --ci02 : rgba(255, 69, 97, 1);
+
+}
+
+*{
+    font-family: 'Noto Sans Thai', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection{
+    background: var(--ci01);
+    color:#fff;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--ci01);
+    border-radius: 25px;
+}
+
+body{
+    background:#fff;
+    overflow-x: hidden;
+
+}
+
+#preloader{
+    background: #fff url(../img/Preloader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.learn-more-btn { 
+    background-color:var(--ci02);
+    font-size: 18px; 
+    font-weight: 700;
+    color: #fff !important;
+    padding: 12px 29px !important;
+    border-radius: 25px;
+    border: 2px solid var(--ci02);
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%); 
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.7s;
+}
+.btn-extra-header {
+    color: var(--text-dark-gray) !important;
+    background-color: transparent; 
+    border: 2px solid var(--text-dark-gray);
+} 
+
+
+/* Header */
+header{
+    background-color: #fff;
+    z-index: 888;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand{
+    color: rgba(255, 69, 97, 1);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Secular One', sans-serif;
+}
+
+.logo{
+    width: 200px;
+}
+
+header .navigation{
+    position: relative;
+}
+
+header .navigation .navigation-item a{
+    position: relative;
+    color: #000;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-item a:before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(90deg, rgba(255, 69, 97, 1) 0%, rgba(255, 36, 120, 1) 100%);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-item a:hover:before{
+    width: 100%;
+}
+
+header .nav-contact{
+   
+}
+
+@media (max-width: 1040px){
+    header{
+      padding: 12px 20px; 
+    }
+    
+    section{
+        padding: 100px 20px;
+    }
+
+    .home .media-icons{
+       
+        right: 15px;
+       
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-item a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-item a:before{
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation.active .navigation-item{
+        background: rgb(255, 255, 255);
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction:  column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgba(226, 226, 226, 0.2);
+    }
+
+    .menu-btn{
+        background: url(../img/menu.png);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active{
+        position: fixed;
+        right: 0;
+        margin-right: 10px;
+        z-index: 999;
+        background: url(../img/cancel.png);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+   
+}
+
+
+/* 3 Banner */
+.banner_wrapper{
+    display: flex;
+    width: 100%;
+    padding: 100px 0 125px;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover; 
+    justify-content: center;
+    align-items: center;
+}
+.banner_wrapper .banner-subtitle { 
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.banner_wrapper .banner-title {
+    font-weight: 800;
+    font-size: 40px;
+    text-transform: capitalize;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+.banner_wrapper .banner-title span {
+    color: var(--ci02);
+}
+.banner_wrapper .banner-title-text { 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 450px;
+    color: var(--text-light-2);
+}
+.banner_wrapper .learn-more-btn-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+.banner_wrapper .header-img-section img {
+    width: 100%;
+}
+.projects{
+    margin-top: -100px;
+    background-color: var(--ci02);
+    padding:30px 0;
+    color: #fff;
+}
+.projects h2{
+    color: var(--text-orange);
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.5;
+    margin-bottom:0;
+}
+.projects p{ 
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5; 
+    color:var(--text-light-2);
+}
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/* 10 FAQs */
+.faq_wrapper{
+    padding:100px 0 0;
+}
+.faq_wrapper .faq_subtitle{ 
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #000;
+}
+.faq_wrapper .faq_title{
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+    color: var(--text-black);
+}
+.faq_wrapper .accordion-button:hover,
+.faq_wrapper .accordion-button:focus{
+    box-shadow: none;
+    color: var(--ci02);
+}
+.faq_wrapper .accordion-item{
+    border:0;
+}
+.faq_wrapper .accordion-button{
+    font-size: 21px;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: var(--text-black);
+    background-color: var(--text-white);
+    border-radius: 0;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid var(--text-light-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.faq_wrapper .accordion-button::after{
+    content:'\002B';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    display: inline-block;
+    background-image: none;
+}
+.faq_wrapper .accordion-button:not(.collapsed)::after{
+    content:"\2212";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    display: inline-block;
+    background-image: none;
+    transform:unset;
+}
+.faq_wrapper .accordion-body{
+    color: var(--text-black); 
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding-bottom: 25px;
+    line-height: 1.5; 
+}
+
+/* footer */
+footer{
+    background-color: #222;
+    color: #eee;
+}
+
+footer p{
+    font-family :  'Poppins', sans-serif;
+    background-color: #222;
+    color: #eee;
+}
+
+
+footer h5{
+    font-family :  'Poppins', sans-serif;
+  color: rgba(255, 69, 97, 1);
+}
+
+footer a{
+  text-decoration: none;
+  color: #eee;
+  font-family :  'Poppins', sans-serif;
+}
+
+footer a:hover{
+  color: rgba(255, 69, 97, 1);
+}
+
+footer span a{
+  text-decoration: none;
+  color: rgba(255, 69, 97, 1);
+}
+footer span a:hover{
+  color: #eee;
+}

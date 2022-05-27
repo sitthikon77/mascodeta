@@ -6,6 +6,11 @@
     --ci01 : rgba(255, 69, 136, 1);
     --ci02 : rgba(255, 69, 97, 1);
 
+    --primary-font: Quicksand;
+    --secondary-font: 'Poppins', sans-serif;
+    --normal-font-weight:400;
+    --bold-font-weight:700;
+
 }
 
 *{
@@ -13,15 +18,19 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none; border:none;
-    text-transform: capitalize;
     transition: all .2s linear;
     margin: 0;
     padding: 0;
 }
 
+
 *::selection{
     background: var(--ci01);
     color:#fff;
+}
+
+a {
+    text-decoration: none;
 }
 
 html{
@@ -78,7 +87,7 @@ body{
 /* Header */
 header{
     background-color: #fff;
-    z-index: 888;
+    z-index: 100;
     position: absolute;
     top: 0;
     left: 0;
@@ -207,7 +216,7 @@ header .nav-contact{
         position: fixed;
         right: 0;
         margin-right: 10px;
-        z-index: 999;
+        z-index: 100;
         background: url(../img/cancel.png);
         background-repeat: no-repeat;
         background-size: 70%;
@@ -366,24 +375,25 @@ header .nav-contact{
 footer{
     background-color: #222;
     color: #eee;
+    font-size: 0.8rem;
 }
 
 footer p{
-    font-family :  'Poppins', sans-serif;
+   
     background-color: #222;
     color: #eee;
 }
 
 
 footer h5{
-    font-family :  'Poppins', sans-serif;
+ 
   color: rgba(255, 69, 97, 1);
 }
 
 footer a{
   text-decoration: none;
   color: #eee;
-  font-family :  'Poppins', sans-serif;
+
 }
 
 footer a:hover{
@@ -397,3 +407,262 @@ footer span a{
 footer span a:hover{
   color: #eee;
 }
+
+.about_wrapper{
+    padding:100px 0 0; 
+}
+.about_wrapper .about_number{
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 24px;
+    padding: 4px 17px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    max-width: 44px;
+    color: #fff;
+    background-color: var(--ci02);
+}
+.about_wrapper .about_title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.25;
+    max-width: 1000px;
+    margin-bottom: 25px;
+    color: var(--text-black);
+}
+.about_wrapper .about_text{ 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+    max-width: 700px;
+    color:var(--text-light-2);
+}
+.about_wrapper .innovate{
+    background:var(--bg-light-2);
+    padding:80px 0; 
+}
+
+.about_wrapper i{
+    font-size: 30px;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.about_wrapper h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* 6 Services */
+.service-item-wrap {
+    background-color: #fff;
+}
+
+.service-menu-area ul li div {
+    display: block;
+    margin-bottom: 2.8125rem;
+}
+
+.service-menu-area ul li div .service-icon {
+    height: 5.625rem;
+    width: 5.625rem;
+    background-color: #fff;
+    line-height: 5.625rem;
+    text-align: center;
+    border-radius: 100%;
+    float: left;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-menu-area ul li div .service-icon:hover,
+.service-menu-area ul li div.active .service-icon {
+    background-color: var(--ci02);
+    color: #fff;
+    box-shadow: 0 .125rem 1.25rem rgb(34 30 31 / 40%);
+}
+
+.service-menu-area ul li:nth-child(1) {
+    margin-left: 0.5625rem;
+}
+
+.service-menu-area ul li:nth-child(2) {
+    margin-left: -2.9375rem;
+}
+
+.service-menu-area ul li:nth-child(3) {
+    margin-left: -6.375rem;
+}
+
+.service-menu-area ul li:nth-child(4) {
+    margin-left: -8.8125rem;
+}
+
+.service-menu-area ul li div p,
+.service-menu-area ul li div h5 {
+    padding-left: 6.875rem;
+    display: block;
+    text-align: left;
+}
+
+.service-menu-area ul li div p span {
+    color: var(--secondary-text)
+}
+
+.counter {
+    background-image: url('../images/counter-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3.125rem;
+    position: relative;
+}
+
+.counter::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.counter h1,
+.counter p {
+    position: relative;
+    z-index: 3;
+    color: var(--text-white)
+}
+
+@media (max-width: 1199px) {
+
+    /* header */
+    .navbar-expand-lg .navbar-nav {
+        align-items: center;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 0;
+        font-size: .875rem;
+    }
+
+    .main-btn {
+        font-size: .875rem;
+    }
+
+    /* booking area */
+    .booking-area {
+        padding: 3rem .625rem;
+    }
+
+    .booking-area .main-btn {
+        padding-left: .3125rem !important;
+        padding-right: .3125rem !important;
+    }
+
+    /* service */
+    .service-item-wrap .tab-content img {
+        width: 100%;
+    }
+
+    .service-menu-area ul li a {
+        margin-bottom: .8125rem;
+        overflow: hidden;
+    }
+
+    .service-menu-area ul li:nth-child(1) {
+        margin-left: -4.4375rem;
+    }
+
+    .service-menu-area ul li:nth-child(2) {
+        margin-left: -6.9375rem;
+    }
+
+    .service-menu-area ul li:nth-child(3) {
+        margin-left: -9.375rem;
+    }
+
+    .service-menu-area ul li:nth-child(4) {
+        margin-left: -12.8125rem;
+    }
+
+    .service-menu-area ul li a h5 {
+        margin-bottom: .375rem;
+    }
+}
+
+@media (max-width:991px) {
+
+    /* custom css */
+    section {
+        padding: 1.875rem 0;
+    }
+
+   
+    /* services */
+    .service-menu-area {
+        padding:1.5rem 0.5rem;
+    }
+
+    .service-menu-area ul li {
+        margin-left: unset !important;
+    }
+
+  
+
+}
+
+
+/*7 Team Section */
+.team_wrapper .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.team_wrapper .team-info {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 1.25rem;
+    margin-bottom: -4.6875rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.team_wrapper .card:hover .team-info {
+    margin-bottom: 0;
+}
+
+.team_wrapper .team-info h5,
+.team_wrapper .team-info p {
+    color: #fff;
+}
+
+.team_wrapper .team-info .social-network {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 1.25rem;
+    margin: 1.25rem -1.25rem -1.25rem;
+    background-color:var(--ci02);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.team_wrapper .team-info .social-network li a {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    display: block;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
